@@ -1,0 +1,49 @@
+import UIKit
+//1 задание
+
+import UIKit
+
+//1. Написать функцию, которая определяет, четное число или нет
+var numberArray = [69, 3392, 244333, 223239, 7, 91, 28, 132]
+for sorting in numberArray{
+    if sorting % 2 == 0 {
+        print("\(sorting) четное число")
+    } else {
+        print("\(sorting) нечетное число")
+    }
+}
+
+// 2 задание
+
+for divided in numberArray{
+    if divided % 3 == 0 {
+        print("\(divided) делится на 3 без остатка")
+    } else {
+        print("\(divided) делится на 3 с остатком")
+    }
+}
+
+// 3 задание
+
+var oneHundred: Array<Int> = []
+for i in 2...101{
+    oneHundred.append(i)
+}
+print(oneHundred)
+
+    //4 задание
+
+var del3 = oneHundred.filter {$0 % 2 != 0 && $0 % 3 == 0}
+print(del3)
+
+    //5 задание
+
+func fibonacciArray(_ n: Int) -> [Double] {
+    var fibonacci: [Double] = [1, 1]
+    (2...n).forEach{ i in
+        fibonacci.append(fibonacci[i - 1] + fibonacci[i - 2])
+    }
+    return fibonacci
+}
+print(fibonacciArray(100))
+
